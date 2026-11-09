@@ -3,114 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#102a56">
-  <title>COMPLEXLEARN | Smart Learning</title>
+  <meta name="theme-color" content="#101b3d">
+  <title>COMPLEXLEARN | Learn Without Limits</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <aside class="sidebar" id="sidebar">
-    <div class="brand"><span class="brand-mark">E</span><span>COMPLEXLEARN</span></div>
-    <p class="side-label">LEARNING SPACE</p>
-    <button class="nav-link active" data-page="home">⌂ <span>Dashboard</span></button>
-    <button class="nav-link" data-page="doubts">✦ <span>AI Doubt Solver</span></button>
-    <button class="nav-link" data-page="tests">✓ <span>Mock Tests</span></button>
-    <button class="nav-link" data-page="library">▤ <span>Digital Library</span></button>
-    <button class="nav-link" data-page="planner">◷ <span>Alarms & Reminders</span></button>
-    <button class="nav-link" data-page="news">▣ <span>News & Updates</span></button>
-    <div class="sidebar-bottom"><div class="mini-avatar">S</div><div><strong>Student</strong><small>Keep learning!</small></div></div>
-  </aside>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ComplexLearn home"><span class="brand-mark">C</span> COMPLEX<span>LEARN</span></a>
+    <span class="top-note">LEARN WITHOUT LIMITS</span>
+  </header>
 
-  <main class="main">
-    <header class="topbar">
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-      <div><span class="eyebrow">YOUR PERSONAL LEARNING SPACE</span><h1 id="pageTitle">Dashboard</h1></div>
-      <div class="top-actions"><span class="today" id="todayLabel"></span><div class="avatar">S</div></div>
-    </header>
+  <main class="shell">
+    <section class="welcome">
+      <div class="eyebrow">YOUR LEARNING SPACE</div>
+      <h1>Big goals start<br><span>with one step.</span></h1>
+      <p>Learn, practise, explore and grow with your personal learning dashboard.</p>
+      <div class="feature-pills"><span>✦ AI Doubt Solver</span><span>✓ Mock Tests</span><span>▤ Digital Library</span></div>
+    </section>
 
-    <section class="page active" id="home">
-      <div class="welcome">
-        <div><span class="pill">✦ LEARN • PRACTISE • GROW</span><h2>Welcome back, Student! 👋</h2><p>Your next big achievement starts with one small step.</p></div>
-        <div class="welcome-art" aria-hidden="true">📚</div>
+    <section class="panel" aria-live="polite">
+      <div id="loginStep" class="step">
+        <div class="step-count">STEP 1 OF 2</div>
+        <h2>Welcome back</h2>
+        <p class="muted">Enter your name to get started.</p>
+        <form id="loginForm">
+          <label for="studentName">Your name</label>
+          <input id="studentName" name="name" type="text" placeholder="Enter your name" maxlength="40" required autocomplete="name">
+          <label for="email">Email <span class="optional">(optional for this demo)</span></label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+          <button class="primary" type="submit">Continue <span>→</span></button>
+        </form>
+        <p class="fineprint">Demo sign-in only. No password or personal account is created.</p>
       </div>
-      <div class="stats-grid">
-        <article class="stat-card"><span class="stat-icon blue">✓</span><div><small>Mock tests available</small><strong>03</strong></div></article>
-        <article class="stat-card"><span class="stat-icon purple">▤</span><div><small>Library resources</small><strong>06</strong></div></article>
-        <article class="stat-card"><span class="stat-icon orange">◷</span><div><small>Study reminders</small><strong id="reminderCount">00</strong></div></article>
+
+      <div id="roleStep" class="step hidden">
+        <div class="step-count">STEP 2 OF 2</div>
+        <h2>How will you use COMPLEXLEARN?</h2>
+        <p class="muted">Choose the option that describes you.</p>
+        <div class="role-options">
+          <button class="role-card" data-role="Student" type="button"><span class="role-icon">🎓</span><span><strong>I'm a Student</strong><small>Study, practise and track learning</small></span><span class="arrow">→</span></button>
+          <button class="role-card" data-role="Teacher" type="button"><span class="role-icon">👩‍🏫</span><span><strong>I'm a Teacher</strong><small>Prepare lessons and support learners</small></span><span class="arrow">→</span></button>
+        </div>
+        <button class="back" id="backButton" type="button">← Back</button>
       </div>
-      <div class="content-grid">
-        <article class="panel">
-          <div class="panel-heading"><div><span class="eyebrow">QUICK ACCESS</span><h3>What would you like to do?</h3></div></div>
-          <div class="quick-grid">
-            <button class="quick-card" data-go="doubts"><span class="quick-icon lavender">✦</span><b>Ask a doubt</b><small>Get help with a topic</small><span class="arrow">↗</span></button>
-            <button class="quick-card" data-go="tests"><span class="quick-icon mint">✓</span><b>Take a test</b><small>Check your knowledge</small><span class="arrow">↗</span></button>
-            <button class="quick-card" data-go="library"><span class="quick-icon peach">▤</span><b>Open library</b><small>Explore study resources</small><span class="arrow">↗</span></button>
-            <button class="quick-card" data-go="planner"><span class="quick-icon sky">◷</span><b>Plan study time</b><small>Set an alarm or reminder</small><span class="arrow">↗</span></button>
-          </div>
-        </article>
-        <article class="panel focus-panel">
-          <span class="eyebrow">A LITTLE MOTIVATION</span><div class="quote-mark">“</div>
-          <h3>Small progress every day adds up to big results.</h3><p>Choose one topic, give it your attention, and keep going.</p>
-          <span class="focus-tag">✧ YOUR DAILY STUDY BOOST</span>
-        </article>
-      </div>
-      <article class="panel news-preview"><div class="panel-heading"><div><span class="eyebrow">STAY INFORMED</span><h3>Learning updates</h3></div><button class="text-btn" data-go="news">View all →</button></div><div id="homeNews" class="news-list"></div></article>
-    </section>
 
-    <section class="page" id="doubts">
-      <div class="section-intro"><span class="pill">✦ STUDY ASSISTANT</span><h2>AI Doubt Solver</h2><p>Type a question and get a starter explanation. This offline demo uses sample explanations, not a live AI service.</p></div>
-      <article class="panel solver-panel">
-        <label for="doubtInput">What would you like help understanding?</label>
-        <textarea id="doubtInput" rows="4" placeholder="Example: What is photosynthesis?"></textarea>
-        <div class="solver-bottom"><span class="muted">Tip: Ask one clear question at a time.</span><button class="primary-btn" id="solveBtn">Get explanation ✦</button></div>
-        <div id="doubtAnswer" class="answer-box" hidden aria-live="polite"></div>
-      </article>
-      <div class="note">To make this a real AI tutor, connect a secure backend and an AI API. Never put a private API key in this website's JavaScript.</div>
-    </section>
-
-    <section class="page" id="tests">
-      <div class="section-intro"><span class="pill">✓ PRACTISE ZONE</span><h2>Quick Mock Test</h2><p>Answer these sample questions and check your score at the end.</p></div>
-      <article class="panel quiz-panel">
-        <div class="quiz-top"><span class="eyebrow">GENERAL KNOWLEDGE • 5 QUESTIONS</span><span id="questionNumber" class="question-count">QUESTION 1 / 5</span></div>
-        <div class="progress-track"><div id="quizProgress"></div></div>
-        <h3 id="questionText"></h3>
-        <div id="options" class="options"></div>
-        <div class="quiz-footer"><span id="quizFeedback" class="muted">Choose one answer to continue.</span><button id="nextQuestion" class="primary-btn" disabled>Next question →</button></div>
-        <div id="quizResult" class="result-box" hidden></div>
-      </article>
-    </section>
-
-    <section class="page" id="library">
-      <div class="section-intro"><span class="pill">▤ KNOWLEDGE HUB</span><h2>Digital Library</h2><p>Browse these starter resources. Add your own notes and learning links as your library grows.</p></div>
-      <div class="library-tools"><input id="librarySearch" type="search" placeholder="Search resources..."><span class="muted">6 starter resources</span></div>
-      <div id="libraryGrid" class="resource-grid"></div>
-    </section>
-
-    <section class="page" id="planner">
-      <div class="section-intro"><span class="pill">◷ BUILD A ROUTINE</span><h2>Alarms & Reminders</h2><p>Set a study reminder. Keep this page open for the alarm to ring.</p></div>
-      <div class="content-grid planner-grid">
-        <article class="panel">
-          <h3>Set a study alarm</h3>
-          <form id="reminderForm" class="reminder-form">
-            <label for="reminderTitle">Reminder title</label><input id="reminderTitle" required maxlength="60" placeholder="e.g. Revise mathematics">
-            <label for="reminderTime">Date and time</label><input id="reminderTime" type="datetime-local" required>
-            <button class="primary-btn" type="submit">＋ Add reminder</button>
-          </form>
-          <p class="muted small">Browser notifications may require permission. Sound works while this page is open.</p>
-          <button id="notifyBtn" class="secondary-btn">Enable browser notifications</button>
-        </article>
-        <article class="panel"><div class="panel-heading"><h3>Your reminders</h3><span class="pill" id="reminderPill">0 saved</span></div><div id="reminderList" class="reminder-list"></div></article>
+      <div id="dashboardStep" class="step hidden">
+        <div class="dashboard-head"><div><div class="step-count">YOUR DASHBOARD</div><h2 id="hello">Hello!</h2><p class="muted" id="roleLabel"></p></div><span class="avatar" id="avatar">C</span></div>
+        <p class="dashboard-intro">What would you like to explore today?</p>
+        <div class="tiles">
+          <article class="tile"><span>✦</span><strong>AI Doubt Solver</strong><small>Get help with questions</small></article>
+          <article class="tile"><span>✓</span><strong>Mock Tests</strong><small>Practise your knowledge</small></article>
+          <article class="tile"><span>⏰</span><strong>Alarms & Reminders</strong><small>Organise study time</small></article>
+          <article class="tile"><span>▤</span><strong>Digital Library</strong><small>Explore learning resources</small></article>
+          <article class="tile"><span>📰</span><strong>News & Newspaper</strong><small>Stay informed</small></article>
+          <article class="tile"><span>📚</span><strong>Study Resources</strong><small>Build your knowledge</small></article>
+        </div>
+        <button class="back" id="switchUser" type="button">← Start again / Switch user</button>
       </div>
     </section>
-
-    <section class="page" id="news">
-      <div class="section-intro"><span class="pill">▣ LEARN ABOUT THE WORLD</span><h2>News & Updates</h2><p>Sample educational headlines for the demo. These are not live newspaper feeds.</p></div>
-      <div id="newsGrid" class="news-grid"></div>
-      <div class="note">For live news, connect a trusted news or RSS provider through a backend and follow its usage rules.</div>
-    </section>
-
-    <footer>© <span id="year"></span> COMPLEXLEARN · Learn something new every day.</footer>
   </main>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <footer>© 2026 COMPLEXLEARN · A smarter way to learn</footer>
   <script src="js/app.js"></script>
 </body>
 </html>
