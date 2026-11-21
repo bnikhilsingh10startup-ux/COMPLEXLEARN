@@ -1,68 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101b3d">
-  <title>COMPLEXLEARN | Learn Without Limits</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COMPLEXLEARN</title><link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#" aria-label="ComplexLearn home"><span class="brand-mark">C</span> COMPLEX<span>LEARN</span></a>
-    <span class="top-note">LEARN WITHOUT LIMITS</span>
-  </header>
-
-  <main class="shell">
-    <section class="welcome">
-      <div class="eyebrow">YOUR LEARNING SPACE</div>
-      <h1>Big goals start<br><span>with one step.</span></h1>
-      <p>Learn, practise, explore and grow with your personal learning dashboard.</p>
-      <div class="feature-pills"><span>✦ AI Doubt Solver</span><span>✓ Mock Tests</span><span>▤ Digital Library</span></div>
-    </section>
-
-    <section class="panel" aria-live="polite">
-      <div id="loginStep" class="step">
-        <div class="step-count">STEP 1 OF 2</div>
-        <h2>Welcome back</h2>
-        <p class="muted">Enter your name to get started.</p>
-        <form id="loginForm">
-          <label for="studentName">Your name</label>
-          <input id="studentName" name="name" type="text" placeholder="Enter your name" maxlength="40" required autocomplete="name">
-          <label for="email">Email <span class="optional">(optional for this demo)</span></label>
-          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
-          <button class="primary" type="submit">Continue <span>→</span></button>
-        </form>
-        <p class="fineprint">Demo sign-in only. No password or personal account is created.</p>
-      </div>
-
-      <div id="roleStep" class="step hidden">
-        <div class="step-count">STEP 2 OF 2</div>
-        <h2>How will you use COMPLEXLEARN?</h2>
-        <p class="muted">Choose the option that describes you.</p>
-        <div class="role-options">
-          <button class="role-card" data-role="Student" type="button"><span class="role-icon">🎓</span><span><strong>I'm a Student</strong><small>Study, practise and track learning</small></span><span class="arrow">→</span></button>
-          <button class="role-card" data-role="Teacher" type="button"><span class="role-icon">👩‍🏫</span><span><strong>I'm a Teacher</strong><small>Prepare lessons and support learners</small></span><span class="arrow">→</span></button>
-        </div>
-        <button class="back" id="backButton" type="button">← Back</button>
-      </div>
-
-      <div id="dashboardStep" class="step hidden">
-        <div class="dashboard-head"><div><div class="step-count">YOUR DASHBOARD</div><h2 id="hello">Hello!</h2><p class="muted" id="roleLabel"></p></div><span class="avatar" id="avatar">C</span></div>
-        <p class="dashboard-intro">What would you like to explore today?</p>
-        <div class="tiles">
-          <article class="tile"><span>✦</span><strong>AI Doubt Solver</strong><small>Get help with questions</small></article>
-          <article class="tile"><span>✓</span><strong>Mock Tests</strong><small>Practise your knowledge</small></article>
-          <article class="tile"><span>⏰</span><strong>Alarms & Reminders</strong><small>Organise study time</small></article>
-          <article class="tile"><span>▤</span><strong>Digital Library</strong><small>Explore learning resources</small></article>
-          <article class="tile"><span>📰</span><strong>News & Newspaper</strong><small>Stay informed</small></article>
-          <article class="tile"><span>📚</span><strong>Study Resources</strong><small>Build your knowledge</small></article>
-        </div>
-        <button class="back" id="switchUser" type="button">← Start again / Switch user</button>
-      </div>
-    </section>
-  </main>
-  <footer>© 2026 COMPLEXLEARN · A smarter way to learn</footer>
-  <script src="js/app.js"></script>
-</body>
-</html>
+<header><a class="logo" href="#">COMPLEX<span>LEARN</span></a><small>LEARN WITHOUT LIMITS</small></header>
+<main>
+<section id="login" class="login-layout">
+<div class="intro"><p class="eyebrow">YOUR SMART LEARNING PARTNER</p><h1>Learn more.<br><span>Achieve more.</span></h1><p>One platform to learn, practise, explore and grow.</p></div>
+<div class="panel"><p class="step">STEP 1 OF 2</p><h2>Welcome to COMPLEXLEARN</h2><p>Enter your details to continue.</p>
+<form id="loginForm"><label for="name">Your name</label><input id="name" required maxlength="40" placeholder="Enter your name"><label for="email">Email address</label><input id="email" type="email" required placeholder="Enter your email"><button class="primary">Continue →</button></form>
+<small class="note">Demo login only. This does not create a secure account.</small></div>
+</section>
+<section id="roles" class="panel hidden"><p class="step">STEP 2 OF 2</p><h2>Choose your role</h2><p>How will you use COMPLEXLEARN?</p>
+<button class="role" data-role="Student">🎓 I'm a Student <span>→</span></button><button class="role" data-role="Teacher">👩‍🏫 I'm a Teacher <span>→</span></button><button id="back" class="back">← Back</button></section>
+<section id="dashboard" class="dashboard hidden"><div class="dash-head"><div><p class="step">YOUR LEARNING SPACE</p><h1 id="greeting">Welcome!</h1><p id="roleText"></p></div><button id="logout" class="logout">Log out</button></div>
+<h2>Explore COMPLEXLEARN</h2><div class="grid">
+<button class="tile" data-feature="AI Doubt Solver"><b>🤖 AI Doubt Solver</b><small>Get help with questions</small></button>
+<button class="tile" data-feature="Mock Tests"><b>📝 Mock Tests</b><small>Practise your knowledge</small></button>
+<button class="tile" data-feature="Alarm"><b>⏰ Alarm</b><small>Plan study time</small></button>
+<button class="tile" data-feature="Reminders"><b>🔔 Reminders</b><small>Remember important tasks</small></button>
+<button class="tile" data-feature="Newspaper"><b>📰 Newspaper</b><small>Read news and updates</small></button>
+<button class="tile" data-feature="Digital Library"><b>📚 Digital Library</b><small>Explore study resources</small></button>
+</div><div id="details" class="details hidden"><button id="close">✕</button><h3 id="detailTitle"></h3><p id="detailText"></p></div>
+<div class="contact"><h3>Contact COMPLEXLEARN</h3><a href="mailto:bnikhilsingh10.startup@gmail.com">bnikhilsingh10.startup@gmail.com</a></div>
+</section></main><footer>© 2026 COMPLEXLEARN · Learn without limits</footer>
+<script src="js/app.js"></script></body></html>
